@@ -90,6 +90,15 @@ public class Popover: NSObject {
         localEventMonitor?.start()
     }
 
+    public func remove() {
+        guard item != nil else {
+            return
+        }
+        dismiss()
+        NSStatusBar.system.removeStatusItem(item)
+        item = nil
+    }
+
     /// Shows the Popover with no animation
     public func show() {
         guard !isPopoverWindowVisible else { return }
