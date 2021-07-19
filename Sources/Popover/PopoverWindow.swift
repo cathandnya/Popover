@@ -44,7 +44,7 @@ class PopoverWindow: NSPanel {
     static func window(with configuration: PopoverConfiguration) -> PopoverWindow {
         let window = PopoverWindow.init(
             contentRect: .zero,
-            styleMask: [.utilityWindow],
+            styleMask: [.docModalWindow],
             backing: .buffered,
             defer: true,
             configuration: configuration
