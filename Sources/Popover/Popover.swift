@@ -108,6 +108,8 @@ public class Popover: NSObject {
         guard let button = item.button else { return }
         DispatchQueue.main.async(execute: {
             button.isHighlighted = true
+
+            NSApplication.shared.activate(ignoringOtherApps: true)
         })
     }
 
